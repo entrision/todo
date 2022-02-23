@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Item</th>
+      <th>Completed</th>
+    </tr>
+  </thead>
+  <%= turbo_stream_from 'items' %>
+  <tbody id='items'>
+    <%= render partial: 'item', collection: @items %>
+  </tbody>
+</table>
+<div class='text-center'>
+  <%= link_to 'Add New', new_item_path, class: 'btn btn-primary' %>
+</div>

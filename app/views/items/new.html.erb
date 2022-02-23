@@ -1,0 +1,17 @@
+<div class='row'>
+  <div class='col-6 offset-3' data-controller='todo'>
+    <h1 class='text-center'>Enter a new Item</h1>
+    <%= form_for @item, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_field :body, class: 'form-control', data: { todo_target: 'body', action: 'keyup->todo#countCharacters'  }  %>
+    </div>
+    <div class='text-end'>
+      Characters: <span data-todo-target='counter'><%= @item.body.to_s.size %></span>
+    </div>
+    <div class='text-end'>
+      <%= f.submit data: { todo_target: 'submit' } %>
+    </div>
+  <% end %>
+  </div>
+</div>
