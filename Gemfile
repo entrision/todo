@@ -82,3 +82,5 @@ gem "cable_ready", "= 5.0.0.pre8"
 gem "stimulus_reflex", "= 3.5.0.pre8"
 
 gem "futurism", "= 1.2.0.pre9"
+
+gem 'bootstrap_helpers', github: 'entrision/bootsteap_helpers', branch: 'master'
