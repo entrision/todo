@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/entrision/bootsteap_helpers.git
+  revision: 67396154a997e042cf09836d77e6efbc41973765
+  branch: master
+  specs:
+    bootstrap_helpers (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -250,6 +257,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap
+  bootstrap_helpers!
   cable_ready (= 5.0.0.pre8)
   capybara
   debug

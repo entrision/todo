@@ -1,0 +1,11 @@
+<!-- /app/views/layouts/_main_navigation.html.erb -->
+<%= navbar classes: 'bg-dark navbar-expand-lg navbar-dark ps-4' do |nav| %>
+  <%= nav.brand content: 'Todo' %>
+  <%= nav.toggler target: 'mainMenu' %>
+  <%= nav.collapse id: 'mainMenu' do |c| %>
+    <%= nav.items class: 'ms-auto' do |i| %>
+      <%= i.link 'Tasks', items_path, class: 'btn btn-outline-secondary' %>
+      <%= i.link 'New Task', new_item_path, class: 'btn btn-outline-primary ms-4 me-4' %>
+    <% end %>
+  <% end %>
+<% end %>
