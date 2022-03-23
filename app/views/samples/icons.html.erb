@@ -1,0 +1,17 @@
+
+<%= row do %>
+  <%= col size: 1 do %>
+    <p class='text-center text-<%= %w[success warning danger info].sample %>'>
+        <%= icon 'wsssjsjs' %><br/>
+        Can't Exist
+    </p>
+  <% end %>
+  <% @names.each do |name| %>
+    <%= col size: 1 do %>
+      <p class='text-center text-<%= %w[success warning danger info].sample %>'>
+          <%= icon name %><br/>
+          <%= name %>
+      </p>
+    <% end %>
+  <% end %>
+<% end %>
