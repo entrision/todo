@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/entrision/bootsteap_helpers.git
-  revision: 993b74d769cf8ba67215dfc567338eb5cf4ee45e
+  revision: 496e0703e5ce9c146e838a2fe25760abb26e2198
   branch: master
   specs:
-    bootstrap_helpers (0.1.0)
+    bootstrap_helpers (0.1.1)
+      listen
 
 GEM
   remote: https://rubygems.org/
@@ -125,6 +126,9 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    listen (3.7.1)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.14.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -191,6 +195,9 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    rb-fsevent (0.11.1)
+    rb-inotify (0.10.1)
+      ffi (~> 1.0)
     redis (4.6.0)
     regexp_parser (2.2.1)
     reline (0.3.1)
