@@ -28,3 +28,15 @@
     <% end %>
 
     <%= alert_message 'You passed', header: 'Good job!', level: :success %>
+<%= row do %>
+  <%= col size: 12, md: {size: 6}, lg: { size: 4 } do %>
+    Column
+  <% end %>
+  <%= col size: 12, md: {size: 6}, lg: { size: 4 } do %>
+    Column
+  <% end %>
+  <%= col size: 12, md: {size: 6, offset: 3}, lg: { size: 4, offset: 0} do %>
+    Column
+  <% end %>
+<% end %>
+<br/><br/><br/><br/><br/>
