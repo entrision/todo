@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   get '/samples', to: 'samples#index'
   get '/samples/icons', to: 'samples#icons'
+  get '/samples/grid', to: 'samples#grid'
   root 'items#index'
 end

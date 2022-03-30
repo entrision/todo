@@ -1,0 +1,94 @@
+<h1>Grid Examples</h1>
+<h2>Simple</h2>
+<div class='container'>
+  <%= row do %>
+    <%= col class: 'border' do %>
+      Column 1
+    <% end %>
+    <%= col class: 'border' do %>
+      Column 2
+    <% end %>
+    <%= col class: 'border' do %>
+      Column 3
+    <% end %>
+  <% end %>
+</div>
+
+<h2 class='mt-4'>Partially dynamic columns</h2>
+<div class='container'>
+  <%= row do %>
+    <%= col class: 'border' do %>
+      Column 1 (auto)
+    <% end %>
+    <%= col class: 'border', size: 6 do %>
+      Column 2 (wider)
+    <% end %>
+    <%= col class: 'border' do %>
+      Column 3 (auto)
+    <% end %>
+  <% end %>
+  <%= row do %>
+    <%= col class: 'border', size: 5 do %>
+      Column 1 (wider)
+    <% end %>
+    <%= col class: 'border' do %>
+      Column 2 (auto)
+    <% end %>
+    <%= col class: 'border', size: 5 do %>
+      Column 3 (wider)
+    <% end %>
+  <% end %>
+</div>
+
+<h2 class='mt-4'>Auto with columns</h2>
+<p>
+  The content dictates the size even if it doesn't equal 12
+</p>
+<div class='container'>
+  <%= row do %>
+    <%= col class: 'border', size: 3 do %>
+      Column 1 (3)
+    <% end %>
+    <%= col class: 'border', size: 'auto' do %>
+      Column 2 (auto)
+    <% end %>
+    <%= col class: 'border', size: 5 do %>
+      Column 3 (5)
+    <% end %>
+  <% end %>
+</div>
+
+<h2 class='mt-4'>Columns with Breakpoints</h2>
+<p>
+  Resize the content to test the break points
+</p>
+<div class='container'>
+  <%= row do %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 1 (a,a,a)
+    <% end %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 2 (a,a,b)
+    <% end %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 3 (a,b,c)
+    <% end %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 4 (a,b,d)
+    <% end %>
+  <% end %>
+    <%= row do %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 1 (b,c,e)
+    <% end %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 2 (b,c,f)
+    <% end %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 3 (b,d,g)
+    <% end %>
+    <%= col class: 'border', sm: {size: 12}, md: {size: 6}, lg: {size: 3} do %>
+      Column 4 (b,d,h)
+    <% end %>
+  <% end %>
+</div>
