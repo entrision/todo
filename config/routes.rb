@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/samples', to: 'samples#index'
   get '/samples/icons', to: 'samples#icons'
   get '/samples/grid', to: 'samples#grid'
+  get '/samples/alerts', to: 'samples#alerts'
   root 'items#index'
 end
