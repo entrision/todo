@@ -122,6 +122,8 @@ def mod_dictionary
 end
 
 def previous_info
+  return mod_dictionary unless session[:old_word]
+
   test_word = words[words.index(session[:old_word]) + 1]
   return [test_word], test_word if test_word == session[:word]
 
