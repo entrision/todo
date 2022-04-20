@@ -1,0 +1,50 @@
+<%= row do %>
+  <%= col size: 6, offset: 3 do %>
+    <div class="card">
+        <div class="card-header">Word Selection</div>
+        <div class="card-body">
+        <h5 class="card-title text-center">Today's Word</h5>
+        <p class='card-text text-center'>
+          <strong><%= session[:word] %></strong>
+        </p>
+        <h5 class='card-title text-center'>Yesterday's Word</h5>
+        <p class='text-center'>
+          <strong><%= session[:old_word] %></strong>
+        </p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<%= row class: 'mt-4' do %>
+  <%= col size: 6, offset: 3 do %>
+  <div class="card">
+    <div class="card-header">Your Guess</div>
+    <div class="card-body">
+    <%= form_tag '/wordle/guess', method: 'POST', data: { turbo: false } do %>
+      <div class='mb-3'>
+        <label for="guess" class="form-label">Your Guess</label>
+        <%= text_field_tag :guess, nil, class: 'form-control', maxlength: 5 %>
+      </div>
+      <div class='mb-3 text-end'>
+        <%= link_to 'Solve', '/wordle/solve', class: 'btn btn-danger' %>
+        <%= submit_tag 'Guess', class: 'btn btn-success ' %>
+      </div>
+    </div>
+  </div>
+    <% end %>
+  <% end %>
+<% end %>
+<%= row class: 'mt-4' do %>
+  <%= col size: 6, offset: 3 do %>
+    <div class="card">
+      <div class="card-header">Past Guesses</div>
+      <div class="card-body">
+        <ol>
+          <% @guesses.each do |guess| %>
+              <li><%= decorate_word(session[:word], guess) %></li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  <% end %>
+<% end %>

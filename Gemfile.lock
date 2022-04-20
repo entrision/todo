@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/entrision/bootsteap_helpers.git
-  revision: 747cafe7219f51bf7c493338c5d300127229d725
+  revision: 8d3f13dee5d236f2105a95c552c55fecd2a4eb2a
   branch: master
   specs:
     bootstrap_helpers (0.1.2)

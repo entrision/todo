@@ -5,7 +5,8 @@
   <%= nav.collapse id: 'mainMenu' do |c| %>
     <%= nav.items class: 'ms-auto' do |i| %>
       <%= i.link "#{icon('list-task')} Tasks".html_safe, items_path, class: 'btn btn-outline-secondary' %>
-      <%= i.link "#{icon('plus-square')} New Task".html_safe, new_item_path, class: 'btn btn-outline-primary ms-4 me-4' %>
+      <%= i.link "#{icon('plus-square')} New Task".html_safe, new_item_path, class: 'btn btn-outline-primary ms-4' %>
+      <%= i.link "#{icon('dice-6')} Wordle Solver".html_safe, '/wordle', class: 'btn btn-outline-info ms-4 me-4' %>
     <% end %>
   <% end %>
 <% end %>

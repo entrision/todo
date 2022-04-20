@@ -11,5 +11,11 @@ Rails.application.routes.draw do
   get '/samples/icons', to: 'samples#icons'
   get '/samples/grid', to: 'samples#grid'
   get '/samples/alerts', to: 'samples#alerts'
+
+  # wordle tool
+  post '/wordle/guess', to: 'wordle#guess'
+  get '/wordle/solve', to: 'wordle#solve'
+  get '/wordle', to: 'wordle#index'
+
   root 'items#index'
 end

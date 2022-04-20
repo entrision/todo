@@ -1,0 +1,21 @@
+<%= col size: 5, lg: { size: 2 }  do %>
+  <div class="card mt-4">
+    <div class="card-header">Result</div>
+    <div class="card-body">
+      <p>Method: <strong><%= method %></strong>
+      <p>Answer: <strong><%= decorate_word(session[:word], solve) %></strong></p>
+      <p>Time: <strong><%= real %></strong></p>
+      <p>Attempts: <strong><%= gusses.length %></strong></p>
+    </div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-header">Past Guesses (last 100)</div>
+    <div class="card-body">
+      <ol>
+        <% gusses.last(100).each do |guess| %>
+            <li><%= decorate_word(session[:word], guess) %></li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+<% end %>

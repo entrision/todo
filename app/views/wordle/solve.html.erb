@@ -1,0 +1,9 @@
+<%= row do %>
+  <%= col size: 1 do %>
+  <% end %>
+  <%= render  partial: 'method', locals: { method: 'brute_force', solve: @solve, gusses: @gusses, real: @real } %>
+  <%= render  partial: 'method', locals: { method: 'mod_brute_force', solve: @solve1, gusses: @gusses1, real: @real1 } %>
+  <%= render  partial: 'method', locals: { method: 'dictionary', solve: @solve2, gusses: @gusses2, real: @real2 } %>
+  <%= render  partial: 'method', locals: { method: 'mod_dictionary', solve: @solve3, gusses: @gusses3, real: @real3 } %>
+  <%= render  partial: 'method', locals: { method: 'previous_info', solve: @solve4, gusses: @gusses4, real: @real4 } %>
+<% end %>
