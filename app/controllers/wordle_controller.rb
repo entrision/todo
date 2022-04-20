@@ -18,28 +18,9 @@ class WordleController < ApplicationController
   end
 
   def solve
-    t = Time.now
-    @gusses, @solve = brute_force
-    @real = Time.now - t
-
-    t1 = Time.now
-    @gusses1, @solve1 = mod_brute_force
-    @real1 = Time.now - t1
-
-    t2 = Time.now
-    @gusses2, @solve2 = dictionary
-    @real2 = Time.now - t2
-
-    t3 = Time.now
-    @gusses3, @solve3 = mod_dictionary
-    @real3 = Time.now - t3
-
-    t4 = Time.now
-    @gusses4, @solve4 = previous_info
-    @real4 = Time.now - t4
+    @methods = %w[brute_force mod_brute_force dictionary mod_dictionary previous_info]
   end
 end
-
 
 private
 

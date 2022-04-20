@@ -1,9 +1,23 @@
 <%= row do %>
   <%= col size: 1 do %>
   <% end %>
-  <%= render  partial: 'method', locals: { method: 'brute_force', solve: @solve, gusses: @gusses, real: @real } %>
-  <%= render  partial: 'method', locals: { method: 'mod_brute_force', solve: @solve1, gusses: @gusses1, real: @real1 } %>
-  <%= render  partial: 'method', locals: { method: 'dictionary', solve: @solve2, gusses: @gusses2, real: @real2 } %>
-  <%= render  partial: 'method', locals: { method: 'mod_dictionary', solve: @solve3, gusses: @gusses3, real: @real3 } %>
-  <%= render  partial: 'method', locals: { method: 'previous_info', solve: @solve4, gusses: @gusses4, real: @real4 } %>
+  <% @methods.each do |method| %>
+    <%= futurize partial: 'wordle/method', html_options: {class: 'col-5 col-lg-2'}, extends: 'div', broadcast_each: true, locals: {method: method} do %>
+
+      <%= card nil, {class: 'mt4', style: 'height: 235px'} do |c| %>
+        <%= c.header 'Result' %>
+        <%= c.body do %>
+          <p>Method: <strong><%= method %></strong>
+          <p>Answer: <strong></strong></p>
+          <p>Time: <strong></strong></p>
+          <p>Attempts: <strong></strong></p>
+        <% end %>
+      <% end %>
+      <%= card 'Past Guesses (last 100)', class: 'mt-4' do |c| %>
+        <%= c.body do %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+  <% end %>
 <% end %>

@@ -1,3 +1,7 @@
+<% t = Time.now %>
+<% gusses, solve = eval(method) %>
+<% real = Time.now - t %>
+
 <%= col size: 5, lg: { size: 2 }  do %>
   <%= card nil, {class: 'mt4'} do |c| %>
     <%= c.header 'Result' %>
