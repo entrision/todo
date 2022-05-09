@@ -1,0 +1,27 @@
+<%= row do %>
+  <%= col size: 8, offset: 2, class: 'mt-4' do %>
+    <%= container class: 'bg-dark text-light text-center' do %>
+      I am a container.
+    <% end %>
+
+    <%= container class: 'bg-dark text-light text-center mt-4', breakpoint: 'sm' do %>
+      I am a sm container.
+    <% end %>
+
+    <%= container class: 'bg-dark text-light text-center mt-4', breakpoint: 'md' do %>
+      I am a md container.
+    <% end %>
+
+    <%= container class: 'bg-dark text-light text-center mt-4', breakpoint: 'lg' do %>
+      I am a lg container.
+    <% end %>
+
+    <%= container class: 'bg-dark text-light text-center mt-4', breakpoint: 'xl' do %>
+      I am a xl container.
+    <% end %>
+
+    <%= container class: 'bg-dark text-light text-center mt-4', breakpoint: 'xxl' do %>
+      I am a xxl container.
+    <% end %>
+  <% end %>
+<% end %>
