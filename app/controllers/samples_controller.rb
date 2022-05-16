@@ -3,6 +3,7 @@
 class SamplesController < ApplicationController
   def icons
     @names = BootstrapHelpers::Icon.enumerate
+    raise 'I shot the sherif'
   end
 
   def alerts

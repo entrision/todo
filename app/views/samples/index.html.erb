@@ -1,0 +1,13 @@
+<%= row do %>
+  <%= col size: 12, lg: {size: 4} do %>
+    <%= card 'Bootstrap Examples' do |c| %>
+      <%= c.list do |l| %>
+        <%= l.item link_to('Alerts', '/samples/alerts') %>
+        <%= l.item link_to('Cards', '/samples/card') %>
+        <%= l.item link_to('Containers', '/samples/containers') %>
+        <%= l.item link_to('Grid', '/samples/grid') %>
+        <%= l.item link_to('Icons', '/samples/icons') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,96 @@
+<%= row do %>
+  <%= col do %>
+    <%= card 'Header' do |c| %>
+      <%= c.body do %>
+        <p>This card has an explicit header</p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card nil do |c| %>
+      <%= c.header 'Header' %>
+      <%= c.body do %>
+        <p>This card has a header a different way</p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card nil do |c| %>
+      <%= c.body do %>
+        <p>This card has no header</p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card 'Titles' do |c| %>
+      <%= c.body do %>
+        <%= c.title 'A Title Here' %>
+        <p>This card has a title</p>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= row class: 'mt-4' do %>
+  <%= col do %>
+    <% card 'Titles' do |c| %>
+      <%= c.body do %>
+        <%= c.title 'A Title Here' %>
+        <%= c.subtitle 'A subtitle Here' %>
+        <p>This card has a title</p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card 'Links' do |c| %>
+      <%= c.body do %>
+        <p>This card has links</p>
+        <p>
+          <%= c.link 'Sample Link', 'http://google.com' %>
+          <%= c.link 'Sample Two', samples_path %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card 'Top Image' do |c| %>
+      <%= c.top_image 'https://picsum.photos/100/100' %>
+      <%= c.body do %>
+        <p>This card has a top image and title</p>
+        <p>
+          <%= c.link 'Sample Link', 'http://google.com' %>
+          <%= c.link 'Sample Two', samples_path %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card nil do |c| %>
+      <%= c.top_image 'https://picsum.photos/100/100' %>
+      <%= c.body do %>
+        <p>This card has a top image and no title</p>
+        <p>
+          <%= c.link 'Sample Link', 'http://google.com' %>
+          <%= c.link 'Sample Two', samples_path %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= col do %>
+    <% card 'Footer' do |c| %>
+      <%= c.body do %>
+        <p>This card has a footer</p>
+      <% end %>
+      <%= c.footer do %>
+        <p> I am a footer</p>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

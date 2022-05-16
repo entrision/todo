@@ -46,6 +46,8 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "sassc-rails"
 
+gem 'rouge'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -84,3 +86,4 @@ gem "stimulus_reflex", "= 3.5.0.pre8"
 gem "futurism", "= 1.2.0.pre9"
 
 gem 'bootstrap_helpers', github: 'entrision/bootsteap_helpers', branch: 'master'
+gem 'errors_ror', github: 'entrision/errors-rails', branch: 'main', require: 'errors/ror'

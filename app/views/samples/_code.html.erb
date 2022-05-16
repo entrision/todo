@@ -1,0 +1,14 @@
+<%= row do %>
+  <%= col size: 12, lg: { size: 6, offset: 3 } do %>
+    <%= card title do |c| %>
+      <%= c.body class: 'bg-dark' do %>
+        <div class='p-4'>
+          <%= content %>
+        </div>
+      <% end %>
+      <%= c.footer do %>
+        <%= format %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
